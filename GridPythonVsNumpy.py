@@ -38,7 +38,7 @@ def raster():
     b = np.array([-20, -5, -20])
     c = np.array([20, -5, 20])
 
-    number = 5
+    number = 10
     py_times = []
     np_times = []
     resolutions = []
@@ -54,13 +54,14 @@ def raster():
 
     plt.plot(resolutions, py_times, label = "python")
     plt.plot(resolutions, np_times, label = "numpy")
-    plt.xlabel("Number of pixels for each side")
+    plt.xlabel("Insgesamte Anzahl an Pixel")
     # plt.xticks(range(0, max(resolutions)+1, skalar))
-    plt.ylabel("Time in s")
+    plt.ylabel("Zeit in s")
     plt.ylim(bottom=0)
     plt.xlim(left=(skalar*skalar))
     plt.xscale("log")
     plt.grid()
+    plt.legend()
     plt.show()
 
 if __name__ == "__main__":
